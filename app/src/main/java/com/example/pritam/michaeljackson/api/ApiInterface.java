@@ -15,5 +15,22 @@ public interface ApiInterface {
     @Headers({"Accept: application/json"})
     @GET
     Call<MichaelResponse> getResul(@Url String url, @Header("Authorization") String tokenId);
+    
+    /*public void ProfileQuestionRequest(ProfileUpdateRequest request, Callback<ProfileUpdateResponse> callback) {
+        Call<ProfileUpdateResponse> call = null;
+        try {
+            ApiInterface apiService = ApiClient.getClient ().create (ApiInterface.class);
+            Log.d (TAG, "ProfileUpdate Request URL : " + BASE_URL);
+            call = apiService.profileUpdateRequest (request);
+            call.enqueue (callback);
+        } catch (Exception e) {
+            Log.e (TAG, e.toString (), e);
+            callback.onFailure (call, e);
+        }
+    }*/
+    
+    /*@Headers({"content-type: application/json"})
+    @POST("/api/profile/checkout")
+    Call<CheckOutResponse> checkOutRequestWithId(@Body CheckOutRequestWithId request);*/
 
 }
